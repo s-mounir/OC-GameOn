@@ -149,6 +149,11 @@ main {
   font-size: 16px;
 }
 
+.errorMessage{
+  color: #fe142f;
+  font-size: 17px;
+}
+
 .button:hover {
   background: #3876ac;
 }
