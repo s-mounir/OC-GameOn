@@ -32,6 +32,8 @@ function closeModal() {
 }
 
 //check if value is correct, if not add error message
+let validForm = true;
+
 function isCorrect(condition,num,errorMessage){
   if(condition){
     validForm = false;
@@ -42,13 +44,11 @@ function isCorrect(condition,num,errorMessage){
   }
 }
 
-  
   // validate form
   function validate(e){
     e.preventDefault();
-    let validForm = true;
   
-    const validRegex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+$/;
+    const validRegex = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/;
     
     const first = document.getElementById("first").value;
     const last = document.getElementById("last").value;
@@ -72,7 +72,7 @@ function isCorrect(condition,num,errorMessage){
     isCorrect(birthdate === "",3,"Veillez entrer votre date de naissance");
     isCorrect((typeof quantity !== "number") || (isNaN(quantity)),4,"Veillez entrer un nombre");
     isCorrect((locationCheckbox === null),5,"Vous devez choisir une option");
-    isCorrect(!conditionsGenerales.checked,6,"Vous devez vérifier que vous acceptez les termes et conditions");
+    isCorrect(!conditionsGenerales.checked,5,"Vous devez vérifier que vous acceptez les termes et conditions");
 
     if(validForm){
       console.log("ce formulaire est valid");
