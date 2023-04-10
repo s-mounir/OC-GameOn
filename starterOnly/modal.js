@@ -13,6 +13,7 @@ const modalBtn = document.querySelectorAll(".modal-btn");
 const modalBody = document.querySelector(".modal-body");
 const formData = document.querySelectorAll(".formData");
 const closeBtn = document.querySelector(".close");
+const form = document.querySelector("form");
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
@@ -28,7 +29,7 @@ closeBtn.addEventListener("click", closeModal);
 // close modal form
 function closeModal() {
   modalbg.style.display = "none";
-  // reset des champs
+  form.reset();
 }
 
 //check if value is correct, if not add error message
