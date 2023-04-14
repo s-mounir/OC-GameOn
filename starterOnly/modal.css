@@ -43,12 +43,12 @@ img {
 .topnav a {
   float: left;
   display: block;
-  color: #000000;
+  color: #ff0000;
   text-align: center;
   padding: 12px 12px;
   margin: 5px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 22px;
   font-family: Roboto, sans-serif;
 }
 
@@ -97,7 +97,6 @@ img {
   .topnav a.icon {
     float: right;
     display: block;
-    margin-top: -15px;
   }
 } 
 
